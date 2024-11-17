@@ -131,7 +131,7 @@ class BookController extends Controller
                 return response()->json(['message' => "All books deleted successfully", 'data' => $books], 200);
             }
             return response()->json(['message' => "Some of books not deleted successfully", 'data' => $books], 200);
-
+            
         }
         $book = Book::find($book);
         if($book){  
@@ -139,5 +139,13 @@ class BookController extends Controller
             return response()->json(['message' => "Book deleted successfully"],200);
         }
         return response()->json(['message' => "Book not deleted successfully"],404);
+    }
+    
+    public function generate(Request $request){
+        if ($request->has('count')) {
+            $generated = Book::factory($request->count)->create();
+            return response()->json(['message'=>"generate $request->count books successfully",'data' => $generated],201); 
+        }
+        return response()->json(['message' => "Your request is require a count parameter"],404);
     }
 }

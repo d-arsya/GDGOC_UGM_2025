@@ -21,6 +21,5 @@ class DatabaseSeeder extends Seeder
             "published_at" => "2023-10-25",
         ]);
         Book::first()->delete();
-        Book::factory(30)->create();
     }
 }
