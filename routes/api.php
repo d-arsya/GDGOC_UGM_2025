@@ -10,5 +10,6 @@ Route::get('/', function (Request $request) {
 Route::fallback(function () {
     return response()->json(['message' => "Book not found"]);
 });
+Route::match(['get','post'],'reset', [BookController::class,'reset']);
 Route::get('books/generate',[BookController::class,'generate']);
 Route::apiResource('books',BookController::class);

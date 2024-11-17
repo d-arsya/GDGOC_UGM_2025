@@ -10,16 +10,11 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        Book::create([
+        $book = Book::create([
             "title" => "5 Minute to Learn Go",
             "author" => "Sundar Pichai",
             "published_at" => "2023-10-25",
         ]);
-        Book::create([
-            "title" => "5 Minute to Learn Go",
-            "author" => "Sundar Pichai",
-            "published_at" => "2023-10-25",
-        ]);
-        Book::first()->delete();
+        $book->delete();
     }
 }
