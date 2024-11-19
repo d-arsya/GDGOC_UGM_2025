@@ -10,7 +10,7 @@
     },
     "servers": [
         {
-            "url": "http://gdgoc_ugm_2025.test/api",
+            "url": "http://gdgoc_ugm_2025.test",
             "description": "Dokumentasi API sebagai penugasan Hacker Backend GDGoC UGM 2025"
         }
     ],
