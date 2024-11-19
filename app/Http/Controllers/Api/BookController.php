@@ -68,11 +68,11 @@ class BookController extends Controller
         foreach ($request->data as $item) {
             try {
                 $book = Book::create($item);
+                $books[] = $book;
             } catch (\Throwable $th) {
                 $failed[] = $item;
                 $message = "Some of books not created, required input";
             }
-            $books[] = $book;
         }
         return response()->json(['message' => $message, 'data' => $books, "failed" => $failed], 201);
     }
