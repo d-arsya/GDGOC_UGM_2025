@@ -491,7 +491,7 @@ _*token active for only 20 seconds after generated_
 ## Documentation
 
 [Documentation](https://gdgoc.disyfa.site/api/documentation)
-
+_please use incognito mode to open the documentation_
 
 ## Authors
 
