@@ -10,7 +10,7 @@
     },
     "servers": [
         {
-            "url": "http://gdgoc_ugm_2025.test",
+            "url": "http://gdgoc_ugm_2025.test/api",
             "description": "Dokumentasi API sebagai penugasan Hacker Backend GDGoC UGM 2025"
         }
     ],
@@ -183,10 +183,7 @@
                                             "type": "string"
                                         },
                                         "data": {
-                                            "type": "array",
-                                            "items": {
-                                                "$ref": "#/components/schemas/BookShow"
-                                            }
+                                            "$ref": "#/components/schemas/BookShow"
                                         }
                                     },
                                     "type": "object"

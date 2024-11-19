@@ -197,8 +197,7 @@ abstract class BookAnnotation{
      *       ),
      *       @OA\Property(
      *         property="data",
-     *         type="array",
-     *         @OA\Items(ref="#/components/schemas/BookShow"),
+     *         ref="#/components/schemas/BookShow",
      *       )
      *     )
      *   ),
