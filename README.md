@@ -33,6 +33,7 @@ This project was created to fulfill the requirements for the Google Developer Gr
   GET /books
 ```
 - Request
+
 | Parameter | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `page` | `int` |Page number for pagination |`no`|
@@ -71,10 +72,13 @@ This project was created to fulfill the requirements for the Google Developer Gr
   GET /books/bulk
 ```
 - Request
+
 | Parameter | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `ids` | `string` |Comma-separated list of book IDs |`yes`|
+
 - Response
+
 ```javascript
 {
   "message": "Some books were not found",
@@ -105,11 +109,15 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```http
   GET /books/{id}
 ```
+
 - Request
+
 | Parameter | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `id` | `int` |ID of the book to retrieve |`yes`|
+
 - Response
+
 ```javascript
 {
   "data": {
@@ -128,7 +136,9 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```http
   POST /books
 ```
+
 - Request _(example)_
+
 ```javascript
 {
   "title": "A Title",
@@ -136,6 +146,7 @@ This project was created to fulfill the requirements for the Google Developer Gr
   "published_at": "2024-11-10"
 }
 ```
+
 | Request Body | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `title` | `string` |Title of the book |`yes`|
@@ -143,6 +154,7 @@ This project was created to fulfill the requirements for the Google Developer Gr
 | `published_at` | `date` |Published date of the book |`yes`|
 
 - Response _(example)_
+
 ```javascript
 {
   "message": "Book created successfully",
@@ -162,7 +174,9 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```http
   POST /books/bulk
 ```
+
 - Request _(example)_
+
 ```javascript
 {
   "data": [
@@ -214,7 +228,9 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```http
   PUT /books/{id}
 ```
+
 - Request _(example)_
+
 | Parameter | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `id` | `int` |ID of the book to retrieve |`yes`|
@@ -234,6 +250,7 @@ This project was created to fulfill the requirements for the Google Developer Gr
 | `published_at` | `date` |Published date of the book |`no`|
 
 - Response
+
 ```javascript
 {
   "message": "Book updated successfully",
@@ -263,7 +280,9 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```http
   PUT /books/bulk
 ```
+
 - Request
+
 ```javascript
 {
   "data": [
@@ -291,6 +310,7 @@ This project was created to fulfill the requirements for the Google Developer Gr
 | `published_at` | `date` |Published date of the book |`no`|
 
 - Response
+
 ```javascript
 {
   "data": [
@@ -328,11 +348,15 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```http
   DELETE /books/{id}
 ```
+
 - Request
+
 | Parameter | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `id` | `int` |ID of the book to delete |`yes`|
+
 - Response
+
 ```javascript
 {
   "message": "Book deleted successfully"
@@ -346,11 +370,13 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```
 
 - Request
+
 | Parameter | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `ids` | `string` |Comma-separated list of book IDs |`yes`|
 
 - Response
+
 ```javascript
 {
   "message": "Some of books not deleted successfully",
@@ -373,12 +399,15 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```http
   GET /books/generate
 ```
+
 - Request
+
 | Parameter | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `count` | `int` |Count of books to generate |`yes`|
 
 - Response
+
 ```javascript
 {
   "message": "generate 2 books successfully",
@@ -409,7 +438,9 @@ This project was created to fulfill the requirements for the Google Developer Gr
 ```http
   GET /reset
 ```
+
 - Response
+
 ```javascript
 {
   "message": "Token generated successfully.",
@@ -424,12 +455,15 @@ _*token active for only 20 seconds after generated_
 ```http
   POST /reset
 ```
+
 - Request
+
 ```javascript
 {
   "token": "b1a2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0u1v2w3x4y5z"
 }
 ```
+
 | Request Body | Type     | Description                | Required     |
 | :-------- | :------- | :------------------------- | :------- |
 | `token` | `string` |Token retrieved before |`yes`|
